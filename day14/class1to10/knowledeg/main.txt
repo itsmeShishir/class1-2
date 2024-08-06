@@ -1,0 +1,45 @@
+import "./App.css"
+// import React from "react";
+function App(){
+  let names = "Shsihir bhandari";
+  let cssStyle = {
+      color: "red", 
+      fontSize: "40px", 
+      backgroundColor: "black"
+    }
+  return (
+    <>
+      <p >Hello my name is {names}</p>
+      <p style={cssStyle}>Hello my name is {names}</p>
+    </>
+    // <React.Fragment>
+    //   <p >Hello my name is {names}</p>
+    //   <p style={cssStyle}>Hello my name is {names}</p>
+    // </React.Fragment>
+  )
+}
+
+export default App;
+
+=============================
+import "./App.css"
+// import Footer from "./components/footer";
+// import {Header} from "./components/header";
+import ujwol from "./assets/img1.jpg"
+function App(){
+  return (
+    <>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vitae voluptas at voluptatum? Quos quaerat at laudantium fugiat fugit animi!
+    </p>
+    <hr />
+    <img src="https://images.unsplash.com/photo-1722353619317-118388bf8b77?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="" />
+    <img src={ujwol} alt="" />
+    </>
+  )
+}
+
+export default App;
+
+
+=================================
+
