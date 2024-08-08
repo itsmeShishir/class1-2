@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one">inc</button>
+    <h1>0</h1>
+    <button class="one">dec</button>
+
+    <script>
+        
+        let value = 0
+        let a = document.getElementById('one')
+        let b = document.getElementsByClassName('one')[0]
+        let c = document.getElementsByTagName('h1')[0]
+        
+        function updateValue(){
+            c.textContent = value
+        }
+
+        a.addEventListener('click', ()=>{
+            if(value < 10){
+                value++;
+                updateValue()
+            }else{
+                alert("above ")
+            }
+            
+        })
+        b.addEventListener('click', ()=>{
+            value--;
+            updateValue()
+        })
+    </script>
+    <script src="./Untitled-1.js"></script>
+</body>
+</html>
