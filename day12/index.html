@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 onclick="aaa(1)">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+        <p id="answer1" style="display: none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, adipisci unde natus perferendis voluptates perspiciatis voluptas necessitatibus consectetur voluptatibus cupiditate, enim itaque possimus provident, rerum nesciunt maxime! Autem officiis, voluptatem blanditiis dolor odit laboriosam iure odio reiciendis! Itaque alias quaerat ullam est tenetur possimus suscipit libero laboriosam corrupti quidem exercitationem eum ut, perspiciatis omnis ratione ex obcaecati ad asperiores dolor repudiandae perferendis eveniet voluptates nam laborum. Eaque, exercitationem voluptatum voluptatem explicabo sapiente deleniti, velit magnam totam molestiae veniam enim earum nulla iure quis laborum fugit eos id deserunt a culpa atque distinctio at quibusdam consequuntur. Similique, corporis! Quibusdam, commodi provident.</p>
+    </div>
+    <div>
+        <h1 onclick="aaa(2)">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+        <p id="answer2" style="display: none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, adipisci unde natus perferendis voluptates perspiciatis voluptas necessitatibus consectetur voluptatibus cupiditate, enim itaque possimus provident, rerum nesciunt maxime! Autem officiis, voluptatem blanditiis dolor odit laboriosam iure odio reiciendis! Itaque alias quaerat ullam est tenetur possimus suscipit libero laboriosam corrupti quidem exercitationem eum ut, perspiciatis omnis ratione ex obcaecati ad asperiores dolor repudiandae perferendis eveniet voluptates nam laborum. Eaque, exercitationem voluptatum voluptatem explicabo sapiente deleniti, velit magnam totam molestiae veniam enim earum nulla iure quis laborum fugit eos id deserunt a culpa atque distinctio at quibusdam consequuntur. Similique, corporis! Quibusdam, commodi provident.</p>
+    </div>
+    <div>
+        <h1 onclick="aaa(3)">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+        <p id="answer3" style="display: none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, adipisci unde natus perferendis voluptates perspiciatis voluptas necessitatibus consectetur voluptatibus cupiditate, enim itaque possimus provident, rerum nesciunt maxime! Autem officiis, voluptatem blanditiis dolor odit laboriosam iure odio reiciendis! Itaque alias quaerat ullam est tenetur possimus suscipit libero laboriosam corrupti quidem exercitationem eum ut, perspiciatis omnis ratione ex obcaecati ad asperiores dolor repudiandae perferendis eveniet voluptates nam laborum. Eaque, exercitationem voluptatum voluptatem explicabo sapiente deleniti, velit magnam totam molestiae veniam enim earum nulla iure quis laborum fugit eos id deserunt a culpa atque distinctio at quibusdam consequuntur. Similique, corporis! Quibusdam, commodi provident.</p>
+    </div>
+    <script>
+        function aaa(e){
+            let a = document.getElementById('answer' + e)
+            if(a.style.display=="none"){
+                a.style.display = "block"
+            }else{
+                a.style.display ="none"
+            }
+        }
+    </script>
+</body>
+</html>

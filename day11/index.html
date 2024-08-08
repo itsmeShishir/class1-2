@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>Logo</h1>
+        </div>
+        <ul id="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="menu-bar" onclick="toggle()">
+            <i class="fa-solid fa-bars" ></i>
+        </div>
+    </nav>
+    <h1 id="heading">Hello</h1>
+    <script>
+        let a = document.getElementById("menu-items")
+        a.style.maxHeight = "0px";
+        function toggle(){
+            if(a.style.maxHeight =="0px"){
+                a.style.maxHeight = "300px";
+            }else{
+                a.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
