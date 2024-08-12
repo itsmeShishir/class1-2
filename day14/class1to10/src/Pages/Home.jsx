@@ -1,7 +1,9 @@
+import {useRef} from "react";
 import { Header } from "../components/header";
 import { Cards } from "../components/Card";
 import { CategoryCards } from "../components/category";
 import Slider from "../components/Slider/slider";
+import A from "../components/A";
 
 function Home(){
   const pic = [
@@ -11,13 +13,21 @@ function Home(){
     "https://images.unsplash.com/photo-1720048169707-a32d6dfca0b3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D"
   ]
   
+  const refs = useRef();
+  const goback = ()=>{
+     refs.current.scrollIntoView({behavior:'smooth'})
+  }
   return (
     <>
-    <Header />
-    <Slider images={pic}/>
-    <CategoryCards />
-    <Cards />
-</>
+      <div ref={refs}></div>
+      <Header />
+      <A />
+      <Slider images={pic}/>
+      <CategoryCards />
+      <Cards />
+
+      <button onClick={goback}>Go back To Top</button>
+    </>
   )
 }
 

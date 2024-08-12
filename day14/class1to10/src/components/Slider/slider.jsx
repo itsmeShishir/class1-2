@@ -1,22 +1,32 @@
-import React from "react";
+import React, {useState, useRef} from "react";
+import "./slider.css";
 
 const Slider = ({images}) => {
-    const [data, SetData] = React.useState(0);
+    const shsihri = useRef();
+    const [data, setdata] = useState(0);
+    console.log("data info")
+    const nextSlide = () => {
+        setdata((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+    };
 
-    const prevState = ()=>{
-        SetData((prevImg)=>{
-            prevImg === prevImg-1 ? 0: prevImg+1;
-        })
-    }
+    const prevSlide = () => {
+        shsihri.current.style.backgroundColor="yellow";
 
-    const nextState = ()=>{
-        SetData((prevImg)=>{
-            prevImg ===  0 ? prevImg: prevImg-1;
-        })
-    }
+        setdata((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+
+    };
+//scrollintoview({behavoir:smmoth})
   return (
     <div>
-        <h2> tTis is A Slider</h2>
+       <button onClick={nextSlide}>+</button>
+       <div>
+        <img src={images[data]} alt="" style={{objectFit:"fill", width:"3000px", height:'450px'}}/>
+       </div>
+       <button ref={shsihri} onClick={prevSlide} style={{backgroundColor:"red"}}>-</button>
     </div>
   )
 }

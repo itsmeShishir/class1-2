@@ -25,7 +25,7 @@ export function CategoryCards() {
     {state.map((items, index) => {
       return(
        
-                <div key={items.id}>
+                <div key={index}>
                  <Card href="#" className="max-w-sm">
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {items}
