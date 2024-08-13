@@ -3,7 +3,7 @@ import D from "./D"
 const C = (props) => {
   return (
     <div>
-      <h1>{props.name}</h1>
+      <D name={props.name}/>
     </div>
   )
 }

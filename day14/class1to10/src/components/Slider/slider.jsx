@@ -5,6 +5,7 @@ const Slider = ({images}) => {
     const shsihri = useRef();
     const [data, setdata] = useState(0);
     console.log("data info")
+    
     const nextSlide = () => {
         setdata((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1

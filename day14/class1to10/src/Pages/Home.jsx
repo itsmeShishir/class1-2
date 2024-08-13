@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useCallback, useRef } from "react";
 import { Header } from "../components/header";
 import { Cards } from "../components/Card";
 import { CategoryCards } from "../components/category";
@@ -14,9 +14,10 @@ function Home(){
   ]
   
   const refs = useRef();
-  const goback = ()=>{
-     refs.current.scrollIntoView({behavior:'smooth'})
-  }
+  const goback = useCallback(()=>(
+    refs.current.scrollIntoView({behavior:'smooth'})
+  ),[])
+
   return (
     <>
       <div ref={refs}></div>
