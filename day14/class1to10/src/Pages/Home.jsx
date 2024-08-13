@@ -1,4 +1,4 @@
-import {useCallback, useRef } from "react";
+import { useMemo, useRef } from "react";
 import { Header } from "../components/header";
 import { Cards } from "../components/Card";
 import { CategoryCards } from "../components/category";
@@ -14,7 +14,7 @@ function Home(){
   ]
   
   const refs = useRef();
-  const goback = useCallback(()=>(
+  const goback = useMemo(()=>(
     refs.current.scrollIntoView({behavior:'smooth'})
   ),[])
 
@@ -31,5 +31,8 @@ function Home(){
     </>
   )
 }
+// form handling, localStorage
+// react router dom
+
 
 export default Home;
