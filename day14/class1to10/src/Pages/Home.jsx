@@ -1,5 +1,5 @@
-import { useMemo, useRef } from "react";
-import { Header } from "../components/header";
+import {useRef } from "react";
+// import { Header } from "../components/header";
 import { Cards } from "../components/Card";
 import { CategoryCards } from "../components/category";
 import Slider from "../components/Slider/slider";
@@ -14,14 +14,15 @@ function Home(){
   ]
   
   const refs = useRef();
-  const goback = useMemo(()=>(
+  function goback(){
     refs.current.scrollIntoView({behavior:'smooth'})
-  ),[])
+  }
+  
 
   return (
     <>
       <div ref={refs}></div>
-      <Header />
+      {/* <Header /> */}
       <A />
       <Slider images={pic}/>
       <CategoryCards />
@@ -31,8 +32,10 @@ function Home(){
     </>
   )
 }
-// form handling, localStorage
+// localStorage, 
 // react router dom
+// custom hooks
+//context Api
 
 
 export default Home;

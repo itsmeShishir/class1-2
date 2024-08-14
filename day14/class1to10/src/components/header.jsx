@@ -1,5 +1,5 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
-
+import { Link } from "react-router-dom";
 export function Header() {
   return (
     <Navbar fluid rounded className="container mx-auto">
@@ -27,15 +27,15 @@ export function Header() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <Link to="/" active>
           Home
-        </Navbar.Link>
-        <Navbar.Link href="#">Category</Navbar.Link>
-        <Navbar.Link href="#">
+        </Link>
+        <Link to="/category">Category</Link>
+        <Link to="/product">
           Products
-        </Navbar.Link>
-        <Navbar.Link href="#">About Us</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        </Link>
+        <Link to="#">About Us</Link>
+        <Link to="/contact">Contact</Link>
       </Navbar.Collapse>
     </Navbar>
   );
