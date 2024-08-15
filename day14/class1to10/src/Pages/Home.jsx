@@ -32,7 +32,7 @@ function Home(){
     </>
   )
 }
-// localStorage, 
+// localStorage 
 // react router dom
 // custom hooks
 //context Api
