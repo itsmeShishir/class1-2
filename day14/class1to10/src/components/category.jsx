@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { Card } from "flowbite-react";
+import axios from "axios";
 
 export function CategoryCards() {
   let [state, SetState] = useState([]);
   useEffect(()=>{
   let fectchData = async()=>{
     try{
-      let response= await fetch("https://fakestoreapi.com/products/categories")
-      let data = await response.json()
-      return SetState(data)
+      let response= await axios.get("https://fakestoreapi.com/products/categories")
+      // let data = await response.json()
+      console.log(response.data)
+      return SetState(response.data)
     }catch(e){
       console.log(e.message)
     }

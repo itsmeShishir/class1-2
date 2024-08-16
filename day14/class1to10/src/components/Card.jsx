@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 export function Cards() {
   let [state, SetState] = useState([]);
@@ -12,7 +13,6 @@ export function Cards() {
     }catch(e){
       console.log(e.message)
     }
-
   }
   fectchData()
   },[])
@@ -32,9 +32,9 @@ export function Cards() {
       imgSrc={items.image}
     >
       <a href="#">
-        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <Link to={`/singleProduct/${items.id}`} className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {items.title}
-        </h5>
+        </Link>
       </a>
       <div className="mb-5 mt-2.5 flex items-center">
         <svg
