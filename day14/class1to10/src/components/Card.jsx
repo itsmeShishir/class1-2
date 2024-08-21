@@ -1,22 +1,11 @@
-import { useState, useEffect } from "react";
 import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
+import CustomHooks from "../hooks/Customhooks";
 
 export function Cards() {
-  let [state, SetState] = useState([]);
-  useEffect(()=>{
-  let fectchData = async()=>{
-    try{
-      let response= await fetch("https://fakestoreapi.com/products")
-      let data = await response.json()
-      return SetState(data)
-    }catch(e){
-      console.log(e.message)
-    }
-  }
-  fectchData()
-  },[])
-
+  const url = "https://fakestoreapi.com/products";
+  let state = CustomHooks(url);
+  
   return (
     <>
 

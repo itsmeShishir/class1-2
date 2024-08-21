@@ -4,7 +4,7 @@ import CustomButton from '../components/Button';
 
 export default function SingleProduct() {
 
-    const [data, setData] = useState({})
+  const [data, setData] = useState({})
   const {id} = useParams();
 
     useEffect(()=>{
