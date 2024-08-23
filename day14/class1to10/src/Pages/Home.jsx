@@ -1,11 +1,20 @@
-import {useRef } from "react";
+import  {useRef } from "react";
 // import { Header } from "../components/header";
 import { Cards } from "../components/Card";
-import { CategoryCards } from "../components/category";
+// import { CategoryCards } from "../components/category";
 import Slider from "../components/Slider/slider";
 import A from "../components/A";
 
 function Home(){
+  // const [email, SetEmial] = React.useState("");
+
+  //  let emaila = localStorage.getItem("email");
+  
+  // localStorage.setItem("email", "Shsihir")
+  let details;
+  localStorage.getItem("email")
+  localStorage.removeItem("email")
+
   const pic = [
     "https://images.unsplash.com/photo-1719937050814-72892488f741?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
     "https://images.unsplash.com/photo-1722260613137-f8f5ac432d69?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D",
@@ -22,10 +31,11 @@ function Home(){
   return (
     <>
       <div ref={refs}></div>
+      {details ? "none": details}
       {/* <Header /> */}
       <A />
       <Slider images={pic}/>
-      <CategoryCards />
+      {/* <CategoryCards /> */}
       <Cards />
 
       <button onClick={goback}>Go back To Top</button>

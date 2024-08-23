@@ -23,7 +23,9 @@ export default function SingleProduct() {
     <div>
       <h1>{data.title}</h1>
         <p>{data.price}</p>
-        <CustomButton />
+        <CustomButton > GO Back TO Home </CustomButton>
+        <CustomButton link="/contact" style="bg-red-400 px-9 text-white py-9"> Go to Contact </CustomButton>
+        <CustomButton link="/contact" style="hover:underline"> Go to Contact </CustomButton>
     </div>
   )
 }

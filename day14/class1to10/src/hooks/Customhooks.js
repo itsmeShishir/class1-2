@@ -6,9 +6,14 @@ const CustomHooks = (url) => {
     React.useEffect(()=>{
     let fetchData = async()=>{
         try{
-        let response= await axios.get(url)
-        console.log(response.data)
-        return SetState(response.data)
+        let cachePost = localStorage.getItem("state");
+        if(cachePost){
+            SetState(JSON.parse(cachePost));
+        }else{
+          let response= await axios.get(url);
+          SetState(response.data);
+          localStorage.setItem("state", JSON.stringify(response.data))
+        }
         }catch(e){
         console.log(e.message)
         }
