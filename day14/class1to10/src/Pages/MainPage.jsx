@@ -6,7 +6,6 @@ const MainPage = () => {
   const clicked = () => {
       SetMode(!mode);
   }
-  
   return (
     <div>
         <Header />
@@ -17,5 +16,4 @@ const MainPage = () => {
     </div>
   )
 }
-
 export default MainPage
